@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<math.h>
+
+int function(int x){
+    int sum = 1;
+    for (int i = 1 ; i <= x ; i ++){
+        sum *= i ;
+    }
+    return sum;
+}
+
+
+int main() {
+    int y;
+    printf("Enter a number: ");
+    scanf("%d" , &y);
+    int a = function(y);
+
+    printf("the result is : %d" , a);
+
+    return 0;
+}
+
