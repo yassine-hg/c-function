@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<math.h>
+
+
+void permutation (int *a, int *b){
+    int t;
+    t = *a;
+    *a = *b;
+    *b = t;
+}
+
+int main(){
+    int v1, v2;
+    printf("enter v1: ");
+    scanf("%d" , &v1);
+    printf("enter v2: ");
+    scanf("%d" , &v2);
+
+    printf("avant permutation v1=0.%d\t v2=%d\n" , v1, v2);
+    permutation(&v1 , &v2);
+    printf("apres permutation v1=%d\t v2=%d", v1, v2);
+
+
+    return 0;
+}
