@@ -1,0 +1,47 @@
+ Write a C program to find the maximum and minimum of some values using a function that returns an array.
+Test Data :
+Input 5 values
+25
+11
+35
+65
+20
+Expected Output :
+
+Number of values you want to input: Input 5 values
+Minimum value is: 11
+Maximum value is: 65
+
+
+
+solution : 
+
+#include <stdio.h>
+
+void large_min(int t[]){
+    int max = t[0];
+    int min = t[0];
+    for (int i = 0 ; i < 5; i++){
+        if (t[i] > max){
+            max = t[i];
+        }
+
+        if (t[i] < min){
+            min = t[i];
+        }
+    }
+    printf("Minimum value is: %d\n", min);
+    printf("maximum value is: %d\n\n", max);
+}
+
+int main(){
+    int n[5];
+
+    printf("input 5 values \n");
+
+    for(int i = 0; i < 5; i++){
+        printf("");
+        scanf("%d", &n[i]);
+    }
+    large_min(n);
+}
